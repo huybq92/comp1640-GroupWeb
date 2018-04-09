@@ -1,0 +1,90 @@
+/* Reference source code: https://codepen.io/miroot/pen/qwIgC  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/*Generic style*/
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form {
+  width: 400px;
+  margin: 16px auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  background: #ebebeb;
+  padding: 14px;
+  font-size: 15px;
+}
+
+.form p {
+  padding: 14px;
+  margin: 1px auto;
+}
+
+.form .message {
+  color: #b3b3b3;
+  font-size: 14px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.form span {
+  padding: 14px;
+  color: red;
+  font-size: 13px;
+}
+
+.form input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+  border-color: #bbb;
+  background: #fff;
+  color: #000;
+}
+
+/* Text fields' focus effect */
+.form input[type="textinput"]:focus,
+.form input[type="password"]:focus,
+.form input[type="email"]:focus {
+  border-color: #888;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input[type="submit"] {
+  background: #43A047;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input[type="submit"]:focus {
+  box-shadow: none;
+}

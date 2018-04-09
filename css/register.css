@@ -1,0 +1,11 @@
+@import url("default.css");
+
+.form .captcha input {
+  width: 122px;
+  height: 30px;
+  padding: 1px;
+}
+
+.form .captcha {
+  display: inline-block !important;
+}
