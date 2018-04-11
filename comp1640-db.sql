@@ -32,11 +32,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Insert Sample Data Table `comp1640`.`accounts`
 -- -----------------------------------------------------
-INSERT INTO `comp1640`.`accounts` VALUES (NULL, "qa_manager", "123456", 2, "huybq.1992@gmail.com");
-INSERT INTO `comp1640`.`accounts` VALUES (NULL, "qa_coordinator", "123456", 1, "huybq.1992@gmail.com");
-INSERT INTO `comp1640`.`accounts` VALUES (NULL, "user1", "123456", 0, "huybq.1992@gmail.com");
-INSERT INTO `comp1640`.`accounts` VALUES (NULL, "user2", "123456", 0, "huybq.1992@gmail.com");
-INSERT INTO `comp1640`.`accounts` VALUES (NULL, "staff1", "123456", 3, "huybq.1992@gmail.com");
+INSERT INTO `comp1640`.`accounts` VALUES (1, "qa_manager", "123456", 2, "huybq.1992@gmail.com");
+INSERT INTO `comp1640`.`accounts` VALUES (2, "qa_coordinator", "123456", 1, "huybq.1992@gmail.com");
+INSERT INTO `comp1640`.`accounts` VALUES (3, "user1", "123456", 0, "huybq.1992@gmail.com");
+INSERT INTO `comp1640`.`accounts` VALUES (5, "user2", "123456", 0, "huybq.1992@gmail.com");
+INSERT INTO `comp1640`.`accounts` VALUES (4, "staff1", "123456", 3, "huybq.1992@gmail.com");
 INSERT INTO `comp1640`.`accounts` VALUES (NULL, "staff2", "123456", 3, "huybq.1992@gmail.com");
 
 
@@ -102,6 +102,18 @@ CREATE TABLE IF NOT EXISTS `comp1640`.`ideas` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Sample data for Table `comp1640`.`ideas`
+-- ----------------------------------------------------- 
+INSERT INTO `ideas` (`idea_id`, `idea_title`, `idea_content`, `idea_time`, `idea_anony`, `accounts_acc_id`, `categories_cate_id`, `idea_filename`) VALUES
+(NULL, 'Idea 1 from user1', 'No content', '2018-03-21 22:55:05', 1, 3, 4, NULL),
+(NULL, 'Idea 1 from user2', 'No content', '2018-03-22 20:08:47', 1, 5, 1, NULL),
+(NULL, 'Idea 2 from user1', 'No content', '2018-03-23 20:11:34', 0, 3, 1, NULL),
+(NULL, 'Idea 2 from user2', 'No content', '2018-03-24 20:14:48', 0, 5, 2, NULL),
+(NULL, 'Idea 3 from user2', 'No content', '2018-03-25 20:15:57', 1, 5, 3, NULL),
+(NULL, 'Idea 4 from user2', 'No content', '2018-03-25 21:07:13', 0, 5, 4, NULL),
+(NULL, 'Idea 3 from user1', 'No content', '2018-03-26 21:09:05', 0, 3, 2, NULL),
+(NULL, 'Idea 4 from user1', 'No content', '2018-03-26 21:10:28', 0, 3, 3, NULL);
 
 
 -- -----------------------------------------------------
