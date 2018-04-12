@@ -205,7 +205,7 @@ require_once '../php/functions.sendEmail.php';
              <h2>Welcome, <?php echo $_SESSION['login_user'] ?></h2>
              <ul>
                  <li><a href="main.php">VIEW IDEAS</a></li>
-                 <li><a href="post.php">POST NEW IDEA</a></li>
+                 <li><a href="settings.php">SETTINGS</a></li>
                  <li><a href="../php/logout.php">LOGOUT</a></li>
              </ul>
           </aside>
